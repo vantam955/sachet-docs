@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product page — Sachet</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Sachet documentation</a><a href="https://example.com/support-form">Support</a></header>
+<main>
+<h1>Product page</h1>
+<p>The product page is a &quot;label&quot;: every element is a block you can reorder, remove, or add in the theme editor. Open <strong>Online Store &gt; Themes &gt; Customize</strong>, choose <strong>Products &gt; Default product</strong>, and select the <strong>Product</strong> section.</p>
+<h2 id="blocks">Blocks</h2>
+<div class="table"><table><thead><tr><th>Block</th><th>What it shows</th><th>Notes</th></tr></thead><tbody><tr><td>Title</td><td>Product title on the color band</td><td>The band uses the product color (see below).</td></tr><tr><td>Price</td><td>Price, compare-at price, unit price, tax note</td><td>Shows &quot;From&quot; when variants have different prices. Shop Pay Installments message can be turned off.</td></tr><tr><td>Label panel</td><td>Rows of name and value, such as &quot;Serving size: 2 capsules&quot;</td><td>One row per line. Separate the name and the value with a colon. A product with its own rows (see below) shows those instead. A &quot;Lasts&quot; row is added automatically when the product has a days of supply (see below).</td></tr><tr><td>Variant picker</td><td>One group of buttons per option</td><td>Swatches show a color or image when the option has swatches. Sold-out values are crossed out.</td></tr><tr><td>Purchase options</td><td>One row per selling plan, with its price</td><td>Appears only when the product has selling plans. The section setting &quot;Preselect the first delivery plan&quot; picks a plan by default; customers can still choose one-time purchase.</td></tr><tr><td>Delivery timeline</td><td>Dots for the deliveries in the coming days</td><td><strong>Time span</strong> sets the window: 60 to 180 days, 90 by default. Needs a plan name with an interval, such as &quot;every 30 days&quot; or &quot;every 2 weeks&quot;. Hidden when there is no interval or the interval is longer than the time span.</td></tr><tr><td>Quantity selector</td><td>Quantity input with plus and minus</td><td>Respects quantity rules (minimum, maximum, increment).</td></tr><tr><td>Buy buttons</td><td>Add to cart and dynamic checkout buttons</td><td>Dynamic checkout buttons (Shop Pay, PayPal, and others) are on by default. For gift cards, a recipient form can be shown.</td></tr><tr><td>Pickup availability</td><td>Local pickup status for the selected variant</td><td>Needs locations with local pickup enabled.</td></tr><tr><td>Description</td><td>The product description</td><td>Styled like blog posts and collection descriptions.</td></tr><tr><td>Text</td><td>Free text</td><td>Use for shipping notes or certifications.</td></tr><tr><td>Custom Liquid</td><td>Your own Liquid or app snippet</td><td>For advanced use.</td></tr><tr><td>App</td><td>Blocks added by apps</td><td>Reviews, size charts, and similar apps.</td></tr></tbody></table></div>
+<h2 id="product-color">Product color</h2>
+<p>Each product can have its own color on the title band, its card on collection pages, and the background behind its images.</p>
+<ol><li>In <strong>Settings &gt; Custom data &gt; Products</strong>, add a metafield with the <strong>Color</strong> type and the namespace and key <code>custom.label_color</code>.</li><li>On each product, set the color.</li><li>In the theme editor, select the <strong>Product</strong> section. Under <strong>Product label color</strong>, connect <strong>Label color</strong> to that metafield (click the dynamic source icon next to the setting).</li></ol>
+<p>Product cards read the metafield on their own; no connection is needed there.</p>
+<p>Leave <strong>Label color</strong> empty to use the theme accent color. <strong>Text on label color</strong> sets the text on the band. Leave it empty and the theme picks a readable text color for each product: the theme <strong>Text</strong> or <strong>Background</strong> color, whichever contrasts more with the label color. Without a label color, the band uses the theme's <strong>Text on accent</strong> color.</p>
+<h2 id="label-rows-for-each-product">Label rows for each product</h2>
+<p>The <strong>Label panel</strong> block's <strong>Rows</strong> are shared by every product that uses the template. To give a product its own rows, such as its serving size:</p>
+<ol><li>In <strong>Settings &gt; Custom data &gt; Products</strong>, add a metafield with the Multi-line text type and the namespace and key <code>custom.label_rows</code>.</li><li><p>On each product, enter one row per line, for example:</p>
+<pre><code>Serving size: 1 scoop (6 g)
+Servings per container: 30</code></pre></li></ol>
+<p>Products with this metafield show their own rows; products without it show the block's <strong>Rows</strong>. The heading and the automatic &quot;Lasts&quot; row stay the same.</p>
+<h2 id="days-of-supply">Days of supply</h2>
+<p>Tell customers how long one unit lasts, such as a 30-day supply of capsules.</p>
+<ol><li>In <strong>Settings &gt; Custom data &gt; Products</strong>, add a metafield with the Integer type and the namespace and key <code>custom.days_of_supply</code>.</li><li>On each product, enter the number of days one unit lasts, for example 30.</li></ol>
+<p>The theme then shows it in three places, with no editor setup:</p>
+<ul><li>Product cards: &quot;30-day supply&quot; below the title.</li><li>Product page: a &quot;Lasts: 30 days&quot; row at the end of the <strong>Label panel</strong> block, after your own rows.</li><li>Cart drawer and cart page: &quot;30-day supply&quot; below the product title, next to the selling plan name.</li></ul>
+<p>The number is per unit, so it does not change with the quantity in the cart. Leave the metafield empty to hide it.</p>
+<h2 id="selling-plans-and-subscriptions">Selling plans and subscriptions</h2>
+<p>Selling plans come from a subscriptions app, for example <strong>Shopify Subscriptions</strong>. After you create plans:</p>
+<ul><li>Each plan appears as a row in <strong>Purchase options</strong> with its price and discount note.</li><li>Plans that do not apply to the selected variant are hidden automatically.</li><li>The <strong>Delivery timeline</strong> reads the interval from the plan name. Name plans &quot;Every 30 days&quot; or &quot;Deliver every 2 weeks&quot; so the timeline can show the schedule. Names without an interval hide the timeline.</li></ul>
+<h2 id="recommendations">Recommendations</h2>
+<p>Two <strong>Product recommendations</strong> sections sit below the product by default: <strong>Complementary products</strong> and <strong>Related products</strong>. Related products are generated automatically. Complementary products are set up in the <strong>Search &amp; Discovery</strong> app. A section stays hidden when it has nothing to show.</p>
+<h2 id="media">Media</h2>
+<p>The theme supports images, videos, 3D models, and YouTube or Vimeo videos. Images with different aspect ratios keep the same square frame. Variant images show when a customer selects the variant.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://example.com/support-form">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Header, announcement bar, and footer — Sachet</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Sachet documentation</a><a href="https://example.com/support-form">Support</a></header>
+<main>
+<h1>Header, announcement bar, and footer</h1>
+<h2 id="header">Header</h2>
+<p>Open the theme editor and select <strong>Header</strong> in the header group.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td>Logo</td><td>Upload a logo. Landscape and portrait logos both work; the theme scales them to the width below. Without a logo, the store name is shown in the heading font.</td></tr><tr><td>Logo width</td><td>Width of the logo in pixels on large screens.</td></tr><tr><td>Menu</td><td>The menu shown in the header. Default: Main menu. Up to three levels: the first level shows as a row on large screens and as a drawer on small screens. When the main menu does not fit on two lines, the header shows the menu button instead.</td></tr><tr><td>Customer account menu</td><td>Links in the account panel that opens from the account icon. Default: Customer account main menu.</td></tr><tr><td>Enable sticky header</td><td>Keeps the header visible while customers scroll.</td></tr><tr><td>Section colors</td><td>Background and text for the header, drawer, and search box. Leave empty to use the theme colors.</td></tr></tbody></table></div>
+<p>The search icon opens a search box with suggestions as customers type. The cart icon opens the cart drawer or the cart page, depending on <strong>Theme settings &gt; Cart &gt; Cart type</strong>.</p>
+<h3 id="customer-accounts">Customer accounts</h3>
+<p>The account icon is Shopify's account component. Customers can sign in without leaving the store. It appears when customer accounts are enabled in <strong>Settings &gt; Customer accounts</strong>.</p>
+<h2 id="announcement-bar">Announcement bar</h2>
+<p>A single line of text with an optional link, shown above the header. Add it from the header group with <strong>Add section</strong>. Use it for shipping notes or launch announcements.</p>
+<h2 id="footer">Footer</h2>
+<p>The footer has blocks you can add, remove, and reorder (up to six):</p>
+<ul><li><strong>Menu</strong> — a heading and a menu. Default: Footer menu.</li><li><strong>Text</strong> — a heading and rich text, for a short brand description or contact details.</li><li><strong>Email signup</strong> — a heading, text, and the signup form. Subscribers are added to your customer list with email marketing consent.</li></ul>
+<p>Footer settings:</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td>Show social media icons</td><td>Icons for the accounts set in <strong>Theme settings &gt; Social media</strong>. Only accounts with a link are shown.</td></tr><tr><td>Show Follow on Shop</td><td>The Follow on Shop button. Requires the Shop sales channel.</td></tr><tr><td>Show country/region selector</td><td>Shown when your store sells in more than one country.</td></tr><tr><td>Show language selector</td><td>Shown when your store has more than one language.</td></tr><tr><td>Show payment icons</td><td>Icons for the payment methods enabled on your store.</td></tr><tr><td>Section colors</td><td>The demo footer uses the dark palette color as background.</td></tr></tbody></table></div>
+<p>The bottom bar shows the selectors, payment icons, copyright, and the &quot;Powered by Shopify&quot; link.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://example.com/support-form">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

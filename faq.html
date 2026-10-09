@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Sachet</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Sachet documentation</a><a href="https://example.com/support-form">Support</a></header>
+<main>
+<h1>FAQ</h1>
+<h2 id="why-don-t-subscription-rows-show-on-my-product-page">Why don't subscription rows show on my product page?</h2>
+<p>The product has no selling plans. Selling plans are created by a subscriptions app such as <strong>Shopify Subscriptions</strong>. After you add a plan to the product, the rows appear in the <strong>Purchase options</strong> block.</p>
+<h2 id="why-is-the-delivery-timeline-hidden">Why is the delivery timeline hidden?</h2>
+<p>The theme reads the delivery interval from the selling plan name. Use a name that includes an interval, for example &quot;Every 30 days&quot; or &quot;Deliver every 2 weeks&quot;. Names like &quot;Subscribe and save&quot; hide the timeline. The timeline also hides when the interval is longer than the block's <strong>Time span</strong> (90 days by default).</p>
+<h2 id="how-do-i-change-a-product-s-color">How do I change a product's color?</h2>
+<p>Set the <code>custom.label_color</code> metafield on the product. Product cards use it automatically. For the product page, select the <strong>Product</strong> section and connect its <strong>Label color</strong> setting to that metafield. See <a href="product-page.html">Product page</a>.</p>
+<h2 id="why-does-every-product-show-the-same-label-rows">Why does every product show the same label rows?</h2>
+<p>The <strong>Rows</strong> in the <strong>Label panel</strong> block belong to the template, so all products share them. Create the <code>custom.label_rows</code> metafield (Multi-line text type) and fill it in on each product; those rows replace the shared ones. See <a href="product-page.html">Product page</a>.</p>
+<h2 id="how-do-i-show-how-long-a-product-lasts">How do I show how long a product lasts?</h2>
+<p>Create the <code>custom.days_of_supply</code> metafield (Integer type) and enter the number of days one unit lasts. Cards and the cart show &quot;30-day supply&quot;, and the product label adds a &quot;Lasts: 30 days&quot; row. No theme setting is needed. See <a href="product-page.html">Product page</a>.</p>
+<h2 id="how-do-i-change-the-theme-s-colors">How do I change the theme's colors?</h2>
+<p>Go to <strong>Theme settings &gt; Colors</strong>. Edit the palette grid to change your brand colors everywhere. To give one section a different background, open that section and set <strong>Section colors</strong>. Clear them to go back to the theme colors.</p>
+<h2 id="why-are-my-section-colors-unreadable">Why are my section colors unreadable?</h2>
+<p>You set a background without a text color. The theme then picks a light or dark text automatically, but it cannot fix a background that is close to the text color you chose. Pick a text color with enough contrast, or clear both fields.</p>
+<h2 id="why-does-my-desktop-header-show-a-menu-button-instead-of-the-menu">Why does my desktop header show a menu button instead of the menu?</h2>
+<p>The main menu does not fit on two lines at that screen width, so the header shows the menu button instead, as it does on phones. Shorten the top-level menu titles or move some links into submenus to show the menu as a row again.</p>
+<h2 id="where-are-the-country-and-language-selectors">Where are the country and language selectors?</h2>
+<p>They appear in the footer when your store sells in more than one country (<strong>Settings &gt; Markets</strong>) or more than one language (<strong>Settings &gt; Languages</strong>). With a single country and language, nothing is shown.</p>
+<h2 id="why-don-t-i-see-the-follow-on-shop-button">Why don't I see the Follow on Shop button?</h2>
+<p>It requires the <strong>Shop</strong> sales channel. Install it from the Shopify App Store, then turn on <strong>Show Follow on Shop</strong> in the footer settings.</p>
+<h2 id="how-do-i-set-up-collection-filters">How do I set up collection filters?</h2>
+<p>Install the free <strong>Search &amp; Discovery</strong> app and choose which filters to show. The theme displays them on collection and search pages.</p>
+<h2 id="can-i-add-an-app-block-to-the-product-page">Can I add an app block to the product page?</h2>
+<p>Yes. In the theme editor, open the <strong>Product</strong> section, click <strong>Add block</strong>, and choose the app's block. App blocks also work in the <strong>Featured product</strong> section.</p>
+<h2 id="how-do-i-translate-the-theme">How do I translate the theme?</h2>
+<p>Use <strong>Settings &gt; Languages</strong> and the <strong>Translate &amp; Adapt</strong> app. All theme text is translatable, including section defaults.</p>
+<h2 id="how-do-i-update-the-theme">How do I update the theme?</h2>
+<p>When a new version is available, you see a notice in <strong>Online Store &gt; Themes</strong>. Updates keep your settings. If you edited the theme code, the update is added to your library as a new copy so you can move your changes.</p>
+<h2 id="can-i-use-a-different-font">Can I use a different font?</h2>
+<p>Yes. <strong>Theme settings &gt; Typography</strong> uses Shopify's font library, including system fonts such as Helvetica and New York. Custom font files are not supported.</p>
+<h2 id="why-did-everything-get-bigger-when-i-changed-the-body-text-size">Why did everything get bigger when I changed the body text size?</h2>
+<p><strong>Body text size</strong> scales the whole layout proportionally (16px = default): headings, spacing, and page width follow the body text, like zooming the page. Use 16px for the layout shown in the demo.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://example.com/support-form">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

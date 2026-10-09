@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog, pages, and other templates — Sachet</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Sachet documentation</a><a href="https://example.com/support-form">Support</a></header>
+<main>
+<h1>Blog, pages, and other templates</h1>
+<h2 id="blog">Blog</h2>
+<p>The blog page lists articles with image, title, excerpt, author, and date, with tag filtering and pagination. Settings: articles per page, show tags, show author.</p>
+<h2 id="article">Article</h2>
+<p>Shows the title, publish date, featured image, content, and comments. Comments use Shopify's comment settings in <strong>Online Store &gt; Blog posts &gt; Manage comments</strong>: with moderation on, the theme tells the customer their comment is awaiting approval. Comments are paginated ten per page. Settings: show featured image, show author.</p>
+<h2 id="pages">Pages</h2>
+<p>The <strong>Default page</strong> template shows the page title and content. The <code>contact</code> template (file <code>page.contact.json</code>) adds the contact form below the content. Assign a template in the page's <strong>Theme template</strong> setting in the Shopify admin.</p>
+<h2 id="404">404</h2>
+<p>Shows a &quot;page not found&quot; message, a search box, and links to the home page and all products.</p>
+<h2 id="password-page">Password page</h2>
+<p>Shown while your store is password protected. It uses your logo or store name, the password message from <strong>Online Store &gt; Preferences</strong>, an email signup form, and the password form.</p>
+<h2 id="gift-card-page">Gift card page</h2>
+<p>Sent to customers who buy a gift card: balance, code, QR code, an Apple Wallet button on iOS, and a link to print. The page uses your logo or store name.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://example.com/support-form">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

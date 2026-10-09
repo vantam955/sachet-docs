@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collections, search, and cart — Sachet</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Sachet documentation</a><a href="https://example.com/support-form">Support</a></header>
+<main>
+<h1>Collections, search, and cart</h1>
+<h2 id="collection-page">Collection page</h2>
+<p>Shows the collection title, description, and image, then the product grid. Settings: products per page, show collection description, show collection image, enable filtering, enable sorting, and section colors.</p>
+<p>Product cards are &quot;label fragments&quot;: a numbered band in the product color, the image on a tinted background, the title, the days of supply when set (see <a href="product-page.html">Product page</a>), the price (with &quot;From&quot; when variants differ), the unit price when set, and Sale or Sold out badges.</p>
+<h3 id="filters-and-sorting">Filters and sorting</h3>
+<p>Filters come from the <strong>Search &amp; Discovery</strong> app: availability, price, product type, vendor, and variant options. Customers can combine filters; the active ones show as removable chips. The filter panel closes with the Escape key or when customers click outside it. Sorting uses Shopify's standard sort options.</p>
+<h2 id="collection-list-page">Collection list page</h2>
+<p>All collections as cards, with pagination. Collections without an image use the first product's image.</p>
+<h2 id="search">Search</h2>
+<p>The search icon in the header opens a box that suggests products, articles, and pages as customers type. Pressing Enter opens the search page, which lists products, articles, and pages with pagination and a message when nothing matches.</p>
+<h2 id="cart">Cart</h2>
+<p><strong>Theme settings &gt; Cart &gt; Cart type</strong> chooses between:</p>
+<ul><li><strong>Drawer</strong> — adding a product opens a panel over the current page. Customers can change quantities, remove items, add a note, and go to checkout without leaving the page.</li><li><strong>Page</strong> — adding a product goes to the cart page.</li></ul>
+<p>Both show for each line: image, title, selected options, selling plan, days of supply, unit price, line discounts, and quantity. Below the lines: order discounts, subtotal, the tax note, the cart note (can be turned off), the checkout button, and dynamic checkout buttons.</p>
+<p>If a customer tries to add more than the available stock, the cart shows Shopify's message and keeps the available quantity.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://example.com/support-form">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

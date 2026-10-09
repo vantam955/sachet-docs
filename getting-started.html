@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started with Sachet — Sachet</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Sachet documentation</a><a href="https://example.com/support-form">Support</a></header>
+<main>
+<h1>Getting started with Sachet</h1>
+<p>Sachet is built for wellness brands with a small, focused lineup that customers reorder on a schedule. This guide takes you from installation to a store that matches the demo.</p>
+<h2 id="1-install-and-publish">1. Install and publish</h2>
+<ol><li>In the Shopify Theme Store, open Sachet and click <strong>Try theme</strong> or <strong>Buy theme</strong>.</li><li>In your Shopify admin, go to <strong>Online Store &gt; Themes</strong>. The theme appears in your theme library.</li><li>Click <strong>Customize</strong> to open the theme editor, make your changes, then click <strong>Publish</strong> when you are ready.</li></ol>
+<p>The demo store's layout, colors, and typography come with the theme. Demo images and products do not.</p>
+<h2 id="2-set-up-your-products">2. Set up your products</h2>
+<p>Sachet works best with 2–10 products. For each product:</p>
+<ul><li><strong>Add a product color (optional).</strong> Create a product metafield with the standard definition <strong>Color</strong> (<code>custom.label_color</code>). Product cards use it automatically. On the product page, connect the <strong>Product</strong> section's <strong>Label color</strong> setting to the metafield (see <a href="product-page.html">Product page</a>). Leave it empty to use the theme accent color.</li><li><strong>Add selling plans (optional).</strong> Install a subscriptions app such as <strong>Shopify Subscriptions</strong> and create plans like &quot;Every 30 days&quot;. Plan rows appear inside the product label automatically. When a plan name includes an interval (for example &quot;every 2 weeks&quot;), the product page also shows the <strong>Delivery timeline</strong> for the next 90 days (change it with the block's <strong>Time span</strong> setting).</li><li><strong>Add days of supply (optional).</strong> Create a product metafield with the Integer type (<code>custom.days_of_supply</code>) and enter how many days one unit lasts. Cards, the product label, and the cart show it automatically (see <a href="product-page.html">Product page</a>).</li><li><strong>Add label rows.</strong> In the theme editor, open the product page, select the <strong>Label panel</strong> block, and add rows such as &quot;Serving size: 2 capsules&quot; or &quot;Servings per container: 30&quot;. These rows are shared by all products; to give each product its own rows, use the <code>custom.label_rows</code> metafield (see <a href="product-page.html">Product page</a>).</li></ul>
+<h2 id="3-choose-your-colors-and-fonts">3. Choose your colors and fonts</h2>
+<p>Go to <strong>Theme settings</strong>:</p>
+<ul><li><strong>Colors.</strong> Edit the palette grid to set your brand colors once. The seven theme colors below the grid reference the palette, so changing a palette color updates the whole store. Any section can override its background and text in <strong>Section colors</strong>; leave them empty to inherit the theme colors.</li><li><strong>Typography.</strong> Pick a heading font and a body font from the font picker. Headings use a condensed font by default and can be set to uppercase or as entered. <strong>Body text size</strong> scales the whole layout proportionally (16px = default): headings, spacing, and page width follow, so the design keeps its balance.</li><li><strong>Label style.</strong> Set the line thickness used for label borders and rules, and the corner radius.</li></ul>
+<h2 id="4-build-your-home-page">4. Build your home page</h2>
+<p>Add sections from the section picker. The demo uses this order:</p>
+<ol><li><strong>Label banner</strong> — your headline, a short description, two buttons, and a few spec rows.</li><li><strong>Product lineup</strong> — every product as a numbered label row with its price and plan savings.</li><li><strong>Delivery steps</strong> — how subscriptions work, in three steps.</li><li><strong>Featured collection</strong>, <strong>Image with text</strong>, <strong>Testimonials</strong>, <strong>Blog posts</strong>, <strong>Email signup</strong>.</li></ol>
+<p>Each section has a <strong>Section colors</strong> group. Use it to alternate light and tinted bands down the page.</p>
+<h2 id="5-menus-header-and-footer">5. Menus, header, and footer</h2>
+<ul><li><strong>Header.</strong> Upload a logo or keep your store name. Choose the <strong>Menu</strong> (Main menu by default) and the <strong>Customer account menu</strong>. Enable the sticky header if you want the header to stay visible while scrolling.</li><li><strong>Announcement bar.</strong> Add a short message above the header.</li><li><strong>Footer.</strong> Add blocks for menus, text, and email signup. Turn on payment icons, social media icons, Follow on Shop (requires the Shop sales channel), and the country and language selectors (shown only when your store sells in more than one country or language).</li></ul>
+<h2 id="6-before-you-launch">6. Before you launch</h2>
+<ul><li>Add a favicon in <strong>Theme settings &gt; Favicon</strong> (32 x 32px .png recommended).</li><li>Set up filters in the <strong>Search &amp; Discovery</strong> app so customers can filter collections.</li><li>Add a contact page: create a page and choose the <code>contact</code> template in <strong>Theme template</strong>.</li><li>Preview the store on your phone. The theme is responsive, but check your images and copy.</li></ul>
+</main>
+<footer>Need help? Contact us through the <a href="https://example.com/support-form">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sections — Sachet</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Sachet documentation</a><a href="https://example.com/support-form">Support</a></header>
+<main>
+<h1>Sections</h1>
+<p>Add sections to any page from the theme editor with <strong>Add section</strong>. Most sections have a heading, and every section has its own content settings and a <strong>Section colors</strong> group. Image size notes use the format recommended by Shopify.</p>
+<h2 id="label-banner">Label banner</h2>
+<p>A large label with a caption, heading, text, two buttons, and spec rows. Blocks: <strong>Label row</strong> (name and value, for example &quot;Ships every: 30 days&quot;). Image: 1200 x 1200px .jpg recommended. Use it as the first section of the home page.</p>
+<h2 id="product-lineup">Product lineup</h2>
+<p>Every product in a collection as a numbered row with its price and, when it has selling plans, the best subscription saving. Choose the collection and the number of products to show.</p>
+<h2 id="delivery-steps">Delivery steps</h2>
+<p>Up to six numbered steps (three by default) that explain how subscriptions work. Blocks: <strong>Step</strong> (heading and text).</p>
+<h2 id="featured-product">Featured product</h2>
+<p>The full product label for one product, including purchase options and the add to cart button. Choosing a variant here does not change the page URL. Supports the same blocks as the product page and app blocks.</p>
+<h2 id="featured-collection">Featured collection</h2>
+<p>A grid of product cards from one collection. Leave the heading empty to use the collection name. Set the number of products and whether to show the &quot;View all&quot; link.</p>
+<h2 id="collection-list">Collection list</h2>
+<p>Cards for several collections. Blocks: <strong>Collection</strong>. Collections without an image show the first product's image.</p>
+<h2 id="image-with-text">Image with text</h2>
+<p>An image next to a heading, text, and a button. Choose the image position. Image: 4:3 aspect ratio recommended.</p>
+<h2 id="rich-text">Rich text</h2>
+<p>A heading, formatted text, and an optional button, for a short story or policy summary. Choose left or center alignment.</p>
+<h2 id="email-signup">Email signup</h2>
+<p>A heading, text, and the signup form. Customers who sign up are added to your customer list with email marketing consent.</p>
+<h2 id="video">Video</h2>
+<p>A video uploaded to Shopify, or a YouTube or Vimeo link. Uploaded videos play instead of the link. Add a cover image and a video description for screen readers. Videos play when customers press play; they do not autoplay.</p>
+<h2 id="blog-posts">Blog posts</h2>
+<p>The latest articles from one blog, with image, title, and excerpt. Choose the blog and the number of articles.</p>
+<h2 id="testimonials">Testimonials</h2>
+<p>Quotes from customers. Blocks: <strong>Testimonial</strong> (quote, author, author detail). Use real quotes with permission.</p>
+<h2 id="logo-list">Logo list</h2>
+<p>Logos of press, certifications, or stockists. Blocks: <strong>Logo</strong> (image, name, optional link). Image: 320 x 140px .png recommended.</p>
+<h2 id="custom-liquid">Custom Liquid</h2>
+<p>A box for your own Liquid or an app's snippet. Available on every page.</p>
+<h2 id="product-recommendations">Product recommendations</h2>
+<p>Shown on product pages. Choose <strong>Related products</strong> (automatic) or <strong>Complementary products</strong> (set up in the Search &amp; Discovery app). Hidden when there is nothing to show.</p>
+<h2 id="contact-form">Contact form</h2>
+<p>Name, email, phone, and message fields. Used by the <code>contact</code> page template; can be added to any page.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://example.com/support-form">support form</a>. We reply within two business days.</footer>
+</body>
+</html>
